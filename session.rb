@@ -3,29 +3,27 @@ require 'time'
 class Session
 	attr_accessor :talks
 
-	VALID_TIME_REGEX = /^([01]?[0-9]|2[0-3])\:[0-5][0-9]$/
-
 	def initialize
 		@end_time = @start_time = 0
 		self.reset
 	end
 
 	def start_time
-		"#{(@start_time / 60).abs}:#{@start_time % 60}"
+		TimeUtil.get_string(@start_time)
 	end
 
 	def start_time=(new_time)
 		validate_time(new_time)
-		@start_time = get_minutes(new_time)
+		@start_time = TimeUtil.get_minutes(new_time)
 	end
 
 	def end_time
-		"#{(@end_time / 60).abs}:#{@end_time % 60}"
+		TimeUtil.get_string(@end_time)
 	end
 
 	def end_time=(new_time)
 		validate_time(new_time)
-		@end_time = get_minutes(new_time)
+		@end_time = TimeUtil.get_minutes(new_time)
 	end
 
 	def current_length
@@ -59,11 +57,7 @@ class Session
 	protected
 
 	def validate_time(new_time)
-		raise "#{new_time} is not a valid time. PLease use hh:mm format"  unless new_time.to_s =~ VALID_TIME_REGEX
-	end
 
-	def get_minutes(new_time)
-		time_parts = new_time.split(':').map {|p| p.to_i}
-		time_parts[0] * 60 + time_parts[1]
+		raise "#{new_time} is not a valid time. PLease use hh:mm format"  unless TimeUtil.validate(new_time)
 	end
 end

@@ -1,15 +1,20 @@
+require './session'
+require './open_end_session'
+
 class Track
-	attr_accessor :sessions
+	attr_accessor :morning_session
+	attr_accessor :afternoon_session
 
 	def initialize
-		self.sessions = []
+		@morning_session = Session.new
+		@afternoon_session = OpenEndSession.new
 	end
 
 	def current_length
-		self.sessions.empty? ? 0 : sessions.sum {|s| s.total_duration }
+		self.morning_session.total_duration + self.afternoon_session.total_duration
 	end
 
 	def is_completed?
-		self.sessions.all? {|session| session.is_full? }
+		morning_session.is_full? && afternoon_session.is_full?
 	end
 end

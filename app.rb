@@ -3,6 +3,7 @@ require './output_handler'
 require './conference'
 require './conference_factory'
 require './conference_planner'
+require './time_util'
 
 DEFAULT_DATA_FILE = 'base_input.txt'
 
@@ -25,20 +26,13 @@ File.readlines(file_name).each do |line|
 	end
 end
 
-abort OutputHandler.new.format_input_error(input_errors) unless input_errors.empty?
+output_handler = OutputHandler.new
+
+abort output_handler.format_input_error(input_errors) unless input_errors.empty?
 
 conference = ConferenceFactory.new_conference(2)
 
 conference = ConferencePlanner.plan(input_talks,conference)
 
-conference.tracks.each_with_index do |track, i|
-    puts "Track #{i + 1}"
-	track.sessions.each_with_index do |session, j|
-		puts "Session #{j + 1}"
-		session.talks.each do |talk|
-			puts "#{talk.title} ===> #{talk.duration} minutes"
-		end
-	end
-end
-
+puts output_handler.format_conference_output(conference).join("\n")
 

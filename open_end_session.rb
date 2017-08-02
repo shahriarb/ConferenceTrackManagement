@@ -1,4 +1,5 @@
 require './session'
+require './time_util'
 
 class OpenEndSession < Session
 
@@ -10,12 +11,12 @@ class OpenEndSession < Session
 
 
 	def soft_end_time
-		"#{(@soft_end_time / 60).abs}:#{@soft_end_time % 60}"
+		TimeUtil.get_string(@soft_end_time)
 	end
 
 	def soft_end_time=(new_time)
 		validate_time(new_time)
-		@soft_end_time = get_minutes(new_time)
+		@soft_end_time = TimeUtil.get_minutes(new_time)
 	end
 
 	def soft_end_length
