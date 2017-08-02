@@ -1,4 +1,4 @@
-require './talk'
+require_relative './talk'
 
 class TalkParser
 	LIGHTNING_DURATION = 5

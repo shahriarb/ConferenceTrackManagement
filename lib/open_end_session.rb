@@ -1,5 +1,5 @@
-require './session'
-require './time_util'
+require_relative './session'
+require_relative './time_util'
 
 class OpenEndSession < Session
 

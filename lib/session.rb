@@ -1,5 +1,3 @@
-require 'time'
-
 class Session
 	attr_accessor :talks
 

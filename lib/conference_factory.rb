@@ -1,5 +1,5 @@
-require './conference'
-require './track'
+require_relative './conference'
+require_relative './track'
 
 class ConferenceFactory
 

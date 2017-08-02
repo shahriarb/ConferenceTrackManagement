@@ -1,11 +1,9 @@
-require './talk_parser'
-require './output_handler'
-require './conference'
-require './conference_factory'
-require './conference_planner'
-require './time_util'
+require_relative './talk_parser'
+require_relative './conference_factory'
+require_relative './conference_planner'
+require_relative './output_handler'
 
-DEFAULT_DATA_FILE = 'base_input.txt'
+DEFAULT_DATA_FILE = './data/base_input.txt'
 
 abort 'you can only pass one params' if ARGV.size > 1
 

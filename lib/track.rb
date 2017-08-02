@@ -1,5 +1,5 @@
-require './session'
-require './open_end_session'
+require_relative './session'
+require_relative './open_end_session'
 
 class Track
 	attr_accessor :morning_session

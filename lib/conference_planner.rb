@@ -1,7 +1,3 @@
-require './conference'
-require './session'
-require './open_end_session'
-
 class ConferencePlanner
 	def self.plan(talks,conference)
 		all_sessions = []
