@@ -20,7 +20,7 @@ class ConferencePlanner
 			talks_order.each_with_index do |talk, index|
 				talk_added = false
 				all_sessions.each do |session|
-					session
+					talk_added = session.add_talk(talk)
 				end
 
 				if talk_added
@@ -37,6 +37,8 @@ class ConferencePlanner
 		end
 
 		raise "It seems we can not fit talks to #{conference.tracks.size} track(s)" unless successful_plan
+
+		raise 'There are still empty slots in conference plan' unless conference.tracks.all {|track| track.is_completed?  }
 
 		conference
 	end

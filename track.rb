@@ -9,4 +9,7 @@ class Track
 		self.sessions.empty? ? 0 : sessions.sum {|s| s.total_duration }
 	end
 
+	def is_completed?
+		self.sessions.all {|session| session.is_full? }
+	end
 end

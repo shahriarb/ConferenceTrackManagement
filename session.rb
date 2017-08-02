@@ -31,4 +31,17 @@ class Session
 	def reset
 		self.talks = []
 	end
+
+	def add_talk(talk)
+		if max_length <= current_length + talk.duration
+			self.talks << talk
+			return true
+		else
+			return false
+		end
+	end
+
+	def is_full?
+		self.current_length == self.max_length
+	end
 end
