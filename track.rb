@@ -10,6 +10,6 @@ class Track
 	end
 
 	def is_completed?
-		self.sessions.all {|session| session.is_full? }
+		self.sessions.all? {|session| session.is_full? }
 	end
 end

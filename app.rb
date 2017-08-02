@@ -2,6 +2,7 @@ require './talk_parser'
 require './output_handler'
 require './conference'
 require './conference_factory'
+require './conference_planner'
 
 DEFAULT_DATA_FILE = 'base_input.txt'
 
@@ -30,7 +31,7 @@ conference = ConferenceFactory.new_conference(2)
 
 conference = ConferencePlanner.plan(input_talks,conference)
 
-conference.traks.each_with_index do |track, i|
+conference.tracks.each_with_index do |track, i|
     puts "Track #{i + 1}"
 	track.sessions.each_with_index do |session, j|
 		puts "Session #{j + 1}"

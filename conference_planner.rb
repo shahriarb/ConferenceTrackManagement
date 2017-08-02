@@ -21,24 +21,23 @@ class ConferencePlanner
 				talk_added = false
 				all_sessions.each do |session|
 					talk_added = session.add_talk(talk)
+					break if talk_added
 				end
 
 				if talk_added
 					if index == talks_order.size - 1
-						#All talks added, we have a successful ordering
-						successful_plan = true
+						#All talks fit into tracks. lets check if all tracks are completed
+						successful_plan = conference.tracks.all? {|track| track.is_completed?  }
 					end
 				else
-					#This order is not working go for next order
-					starting_point += 1
+					#This order is not working. go for next order
 					break
 				end
 			end
+			starting_point += 1 unless successful_plan
 		end
 
 		raise "It seems we can not fit talks to #{conference.tracks.size} track(s)" unless successful_plan
-
-		raise 'There are still empty slots in conference plan' unless conference.tracks.all {|track| track.is_completed?  }
 
 		conference
 	end

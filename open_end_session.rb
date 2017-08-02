@@ -1,17 +1,27 @@
 require './session'
 
 class OpenEndSession < Session
-	attr_reader  :soft_end_time
+
+
+	def initialize
+		super
+		@soft_end_time = 0
+	end
+
+
+	def soft_end_time
+		"#{(@soft_end_time / 60).abs}:#{@soft_end_time % 60}"
+	end
 
 	def soft_end_time=(new_time)
-		raise "#{new_time} is not a valid time as soft end"  unless new_time.to_s =~ Session::VALID_DATE_REGEX
-		@soft_end_time = Time.parse(new_time.to_s)
+		validate_time(new_time)
+		@soft_end_time = get_minutes(new_time)
 	end
 
 	def soft_end_length
 		raise 'Unknown start time' if @start_time.nil?
 		raise 'Unknown soft end time' if @soft_end_time.nil?
-		((@soft_end_time - @start_time) / 60).round
+		@soft_end_time - @start_time
 	end
 
 	def is_full?
