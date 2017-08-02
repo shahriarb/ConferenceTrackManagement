@@ -3,7 +3,7 @@ class TimeUtil
 	VALID_TIME_REGEX = /^([01]?[0-9]|2[0-3])\:[0-5][0-9]$/
 
 	def self.validate(new_time)
-		new_time.to_s =~ VALID_TIME_REGEX
+		!(new_time.to_s =~ VALID_TIME_REGEX).nil?
 	end
 
 	def self.get_minutes(new_time)

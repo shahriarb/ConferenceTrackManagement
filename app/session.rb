@@ -55,7 +55,6 @@ class Session
 	protected
 
 	def validate_time(new_time)
-
 		raise "#{new_time} is not a valid time. PLease use hh:mm format"  unless TimeUtil.validate(new_time)
 	end
 end
