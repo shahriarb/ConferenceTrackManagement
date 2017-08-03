@@ -12,11 +12,11 @@ class TimeUtil
 	end
 
 	def self.get_string(minutes)
-		(minutes / 60).abs.to_s.rjust(2,'0') + ':' + (minutes % 60).to_s.rjust(2,'0')
+		(minutes / 60).ceil.to_s.rjust(2,'0') + ':' + (minutes % 60).to_s.rjust(2,'0')
 	end
 
 	def self.get_string_ampm(minutes)
-		hour = (minutes / 60).abs
+		hour = (minutes / 60).ceil
 		if hour > 12
 			hour_s = (hour - 12).to_s.rjust(2,'0')
 		else

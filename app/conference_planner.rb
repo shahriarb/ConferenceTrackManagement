@@ -20,9 +20,9 @@ class ConferencePlanner
 			temp_perm = talks.dup
 			position_code = index
 			talks.size.downto(1) do |position|
-				selected = (position_code / factorials[position-1]).abs;
+				selected = (position_code / factorials[position-1]).ceil
 				talks_perm << temp_perm[selected]
-				position_code = position_code % factorials[position-1];
+				position_code = position_code % factorials[position-1]
 				temp_perm.delete_at(selected)
 			end
 

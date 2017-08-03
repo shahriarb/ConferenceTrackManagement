@@ -1,8 +1,11 @@
+require_relative './time_util'
+
 class Session
 	attr_accessor :talks
 
 	def initialize
-		@end_time = @start_time = 0
+		@end_time = 0
+		@start_time = 0
 		self.reset
 	end
 
@@ -31,9 +34,8 @@ class Session
 	end
 
 	def max_length
-		raise 'Unknown start time' if @start_time.nil?
-		raise 'Unknown end time' if @end_time.nil?
-		@end_time - @start_time
+		length = @end_time - @start_time
+		length > 0 ? length : 0
 	end
 
 	def reset
@@ -55,6 +57,6 @@ class Session
 	protected
 
 	def validate_time(new_time)
-		raise "#{new_time} is not a valid time. PLease use hh:mm format"  unless TimeUtil.validate(new_time)
+		raise "#{new_time} is not a valid time. Please use hh:mm format"  unless TimeUtil.validate(new_time)
 	end
 end
