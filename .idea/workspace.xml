@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6892dfa6-7618-4d09-bcf0-0b3e06a5826b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/output_handler_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/input_file_reader.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/base_error_input.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/base_too_many_error_input.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/long_input.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/long_talk.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/short_input.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/conference_planner_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/input_file_reader_test.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/output_handler.rb" afterPath="$PROJECT_DIR$/app/output_handler.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.rb" afterPath="$PROJECT_DIR$/app/app.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/conference_planner.rb" afterPath="$PROJECT_DIR$/app/conference_planner.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/track.rb" afterPath="$PROJECT_DIR$/app/track.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/track_test.rb" afterPath="$PROJECT_DIR$/test/track_test.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,58 +29,88 @@
       <file leaf-file-name="app.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/app.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="30" column="48" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="48" />
+            <state relative-caret-position="150">
+              <caret line="14" column="73" lean-forward="true" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="output_handler_test.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/output_handler_test.rb">
+      <file leaf-file-name="conference_planner.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/conference_planner.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+            <state relative-caret-position="540">
+              <caret line="36" column="83" lean-forward="false" selection-start-line="36" selection-start-column="83" selection-end-line="36" selection-end-column="83" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="output_handler.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/output_handler.rb">
+      <file leaf-file-name="conference_planner_test.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/conference_planner_test.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+            <state relative-caret-position="126">
+              <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="session_test.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/session_test.rb">
+      <file leaf-file-name="long_talk.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/long_talk.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="146" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+            <state relative-caret-position="45">
+              <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="conference_factory_test.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/conference_factory_test.rb">
+      <file leaf-file-name="long_input.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/long_input.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="78" lean-forward="true" selection-start-line="21" selection-start-column="78" selection-end-line="21" selection-end-column="78" />
+            <state relative-caret-position="6">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="conference_factory.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/conference_factory.rb">
+      <file leaf-file-name="input_file_reader_test.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/input_file_reader_test.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+            <state relative-caret-position="45">
+              <caret line="7" column="67" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="short_input.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/short_input.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="track.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/track.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="15" lean-forward="false" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="track_test.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/track_test.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="53" column="42" lean-forward="true" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -97,7 +137,6 @@
       <find>confrence</find>
       <find>confrance</find>
       <find>get_minutes</find>
-      <find>s</find>
       <find>se</find>
       <find>sess</find>
       <find>sessio</find>
@@ -105,6 +144,14 @@
       <find>a</find>
       <find>abs</find>
       <find>current_length</find>
+      <find>talkP</find>
+      <find>is_completed?</find>
+      <find>slut</find>
+      <find>slu</find>
+      <find>slot</find>
+      <find>slo</find>
+      <find>s</find>
+      <find>sl</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -116,10 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/base_input.txt" />
-        <option value="$PROJECT_DIR$/talk.rb" />
-        <option value="$PROJECT_DIR$/confrance.rb" />
-        <option value="$PROJECT_DIR$/ourput_decorator.rb" />
         <option value="$PROJECT_DIR$/output_decorator.rb" />
         <option value="$PROJECT_DIR$/confrance_builder.rb" />
         <option value="$PROJECT_DIR$/confrance_factory.rb" />
@@ -146,21 +189,31 @@
         <option value="$PROJECT_DIR$/test/all_test.rb" />
         <option value="$PROJECT_DIR$/fixtures/talks.yml" />
         <option value="$PROJECT_DIR$/app/talk_parser.rb" />
-        <option value="$PROJECT_DIR$/app/conference_planner.rb" />
         <option value="$PROJECT_DIR$/app/session.rb" />
         <option value="$PROJECT_DIR$/app/time_util.rb" />
         <option value="$PROJECT_DIR$/test/open_session_test.rb" />
         <option value="$PROJECT_DIR$/app/open_end_session.rb" />
-        <option value="$PROJECT_DIR$/app/track.rb" />
         <option value="$PROJECT_DIR$/test/conference_test.rb" />
         <option value="$PROJECT_DIR$/test/open_end_session_test.rb" />
         <option value="$PROJECT_DIR$/test/session_test.rb" />
         <option value="$PROJECT_DIR$/test/talk_test.rb" />
-        <option value="$PROJECT_DIR$/test/track_test.rb" />
         <option value="$PROJECT_DIR$/test/conference_factory_test.rb" />
         <option value="$PROJECT_DIR$/app/conference_factory.rb" />
         <option value="$PROJECT_DIR$/app/output_handler.rb" />
         <option value="$PROJECT_DIR$/test/output_handler_test.rb" />
+        <option value="$PROJECT_DIR$/app/input_file_parser.rb" />
+        <option value="$PROJECT_DIR$/app/input_file_reader.rb" />
+        <option value="$PROJECT_DIR$/data/base_error_input.txt" />
+        <option value="$PROJECT_DIR$/data/base_too_many_error_input.txt" />
+        <option value="$PROJECT_DIR$/test/input_file_reader_test.rb" />
+        <option value="$PROJECT_DIR$/app/app.rb" />
+        <option value="$PROJECT_DIR$/app/conference_planner.rb" />
+        <option value="$PROJECT_DIR$/app/track.rb" />
+        <option value="$PROJECT_DIR$/test/track_test.rb" />
+        <option value="$PROJECT_DIR$/data/short_input.txt" />
+        <option value="$PROJECT_DIR$/data/long_input.txt" />
+        <option value="$PROJECT_DIR$/data/long_talk.txt" />
+        <option value="$PROJECT_DIR$/test/conference_planner_test.rb" />
       </list>
     </option>
   </component>
@@ -248,6 +301,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/test" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -425,12 +479,12 @@
       <updated>1501545904139</updated>
       <workItem from="1501545905417" duration="5887000" />
       <workItem from="1501620256226" duration="17067000" />
-      <workItem from="1501703055217" duration="21537000" />
+      <workItem from="1501703055217" duration="25121000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44491000" />
+    <option name="totallyTimeSpent" value="48075000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="810" extended-state="6" />
@@ -466,22 +520,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/app.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="32" lean-forward="true" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/session.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="23" lean-forward="false" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/open_end_session.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -652,26 +690,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/talk_parser.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="164" lean-forward="true" selection-start-line="6" selection-start-column="164" selection-end-line="6" selection-end-column="164" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/talk.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/conference_planner.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="22" column="72" lean-forward="false" selection-start-line="22" selection-start-column="72" selection-end-line="22" selection-end-column="72" />
           <folding />
         </state>
       </provider>
@@ -684,26 +706,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/track_test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/conference_test.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/track.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -756,6 +762,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/output_handler_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/session_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/talk_parser.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="164" lean-forward="true" selection-start-line="6" selection-start-column="164" selection-end-line="6" selection-end-column="164" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/conference_factory.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="31" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/input_file_reader.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="49" lean-forward="false" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/base_too_many_error_input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/output_handler.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/base_error_input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/conference.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -764,10 +834,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/conference_factory.rb">
+    <entry file="file://$PROJECT_DIR$/app/track.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        <state relative-caret-position="180">
+          <caret line="12" column="15" lean-forward="false" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/track_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="53" column="42" lean-forward="true" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/short_input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -780,34 +866,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/session_test.rb">
+    <entry file="file://$PROJECT_DIR$/app/conference_planner.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="146" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+        <state relative-caret-position="540">
+          <caret line="36" column="83" lean-forward="false" selection-start-line="36" selection-start-column="83" selection-end-line="36" selection-end-column="83" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/output_handler.rb">
+    <entry file="file://$PROJECT_DIR$/test/input_file_reader_test.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        <state relative-caret-position="45">
+          <caret line="7" column="67" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/app.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="30" column="48" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="48" />
+        <state relative-caret-position="150">
+          <caret line="14" column="73" lean-forward="true" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/output_handler_test.rb">
+    <entry file="file://$PROJECT_DIR$/data/long_input.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        <state relative-caret-position="6">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/long_talk.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/conference_planner_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
           <folding />
         </state>
       </provider>

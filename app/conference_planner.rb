@@ -34,7 +34,7 @@ class ConferencePlanner
 				talks_order.each_with_index do |talk, index|
 					talk_added = all_sessions.any? {|session| session.add_talk(talk)}
 					break unless talk_added
-					successful_plan = conference.tracks.all? {|track| track.is_completed?  }  if index == talks_order.size - 1
+					successful_plan = conference.tracks.all? {|track| track.is_full?  }  if index == talks_order.size - 1
 				end
 
 				break if successful_plan

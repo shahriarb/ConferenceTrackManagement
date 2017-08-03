@@ -10,7 +10,7 @@ class Track
 		@afternoon_session = OpenEndSession.new
 	end
 
-	def is_completed?
+	def is_full?
 		morning_session.is_full? && afternoon_session.is_full?
 	end
 end
