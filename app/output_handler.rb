@@ -10,7 +10,9 @@ class OutputHandler
 			result += format_session_output(track.morning_session)
 			result << '12:00PM Lunch'
 			result += format_session_output(track.afternoon_session)
+			#According to sample output, The start of networking event always SHOULD show at 05:00PM even if it can start earlier
 			result << '05:00PM Networking Event'
+
 		end
 		result
 	end
@@ -19,7 +21,7 @@ class OutputHandler
 		result = []
 		talk_start = TimeUtil.get_minutes(session.start_time)
 		session.talks.each do |talk|
-			result << "#{TimeUtil.get_string_ampm(talk_start)} #{talk.description} "
+			result << "#{TimeUtil.get_string_ampm(talk_start)} #{talk.description}"
 			talk_start += talk.duration
 		end
 		result
