@@ -5,7 +5,6 @@ class ConferenceFactory
 
 	def self.new_conference(tracks_count)
 		result = Conference.new
-
 		tracks_count.times do
 			track = Track.new
 			track.morning_session.start_time = '09:00'
@@ -17,8 +16,6 @@ class ConferenceFactory
 
 			result.tracks << track
 		end
-
 		result
-
 	end
 end

@@ -3,7 +3,6 @@ require_relative './time_util'
 
 class OpenEndSession < Session
 
-
 	def initialize
 		super
 		@soft_end_time = 0
@@ -20,9 +19,8 @@ class OpenEndSession < Session
 	end
 
 	def soft_end_length
-		raise 'Unknown start time' if @start_time.nil?
-		raise 'Unknown soft end time' if @soft_end_time.nil?
-		@soft_end_time - @start_time
+		length = @soft_end_time - @start_time
+		length > 0 ? length : 0
 	end
 
 	def is_full?

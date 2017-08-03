@@ -1,7 +1,7 @@
 require 'test/unit'
 require_relative '.././app/talk'
 
-class TalkParserTest < Test::Unit::TestCase
+class TalkTest < Test::Unit::TestCase
 
 	def test_title
 		#title should not contain number

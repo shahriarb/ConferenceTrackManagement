@@ -2,7 +2,7 @@ require 'test/unit'
 require_relative '.././app/session'
 require_relative '.././app/talk_parser'
 
-class TalkParserTest < Test::Unit::TestCase
+class SessionTest < Test::Unit::TestCase
 
 	def test_initial_state
 		session = Session.new
