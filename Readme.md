@@ -55,7 +55,7 @@ After __ConferenceFactory__  created a bare __Conference__, main application wil
 
 __ConferencePlanner__ will calculate different permutation of its input-list and for each permutation tries to find an order which can complete all sessions of conference.
  
-To do this it will choose an starting point in permutation and tries to add each talk sequentially into sessions. If in the middle of sequence a talk can not be added to any session, it means we can not use this permutation with this starting point, so we will going to try another starting_point in permutation.
+To do this it will choose a _starting point_ in permutation and tries to add each talk sequentially into sessions. If in the middle of sequence a talk can not be added to any session, it means this permutation with this _starting point_ can not be fit into sessions, so __ConferencePlanner__ will going to try another starting_point in permutation.
 
 __ConferenceFactory__ will use [Factorial](https://en.wikipedia.org/wiki/Factorial_number_system#Permutations) to generate all permutations. If any permutation with any starting point can fit into all sessions, __ConferencePlanner__ will return the result to main application and main application will use __OutputHandler__ to deliver the result to end user. 
 
