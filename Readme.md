@@ -11,7 +11,7 @@ Archive file contains three folders :
 
 1. Unzip the _archive file_ into a path.
 2. Go the path
-3. Run `ruby app/app.rb path_to_input_data_file`
+3. Run `ruby app/app.rb path_to_the_input_data_file`
 
 If you don't provide an input file, source code will use `data/base_input.txt` as input data, which is the sample provided by ThoughtWorks.
 So to get a sample output just unzip the archive, go the path and run `ruby app/app.rb`
@@ -32,8 +32,9 @@ To run all test together:
 
 ## Design
 
-App will receive an input file as an argument which will be passed to __InputFileReader__ class.
-__InputFileReader__ read the file line by line and pass each line to __TalkParser__  class which will analyse the line and create a __Talk__ object if input is valid or an error containing the line number and description of the error.
+App will receive an input file as an argument which will be passed to __InputFileReader__ class. Without any argument App will assume `data/base_input.txt` as its input data.
+
+__InputFileReader__ reads the file line by line and pass each line to __TalkParser__  class which will analyse the line and create a __Talk__ object if input is valid or an error containing the line number and description of the error.
 If number of errors is more than 2, __InputFileReader__ stop it works and return the errors to main application.
 There is a class called __OutputHandler__ which is responsible to format the output. In case of pars errors, main application will use __OutputHandler__ to show formatted output to the user.    
 
