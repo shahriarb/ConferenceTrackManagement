@@ -18,13 +18,12 @@ rescue => exc
 end
 
 output_handler = OutputHandler.new
-
 abort output_handler.format_input_error(input_errors) unless input_errors.empty?
 
 conference = ConferenceFactory.new_conference(2)
 
 begin
-	conference = ConferencePlanner.plan(input_talks,conference)
+	conference = ConferencePlanner.new.plan(input_talks,conference)
 rescue	 => exc
 	abort exc.message
 end

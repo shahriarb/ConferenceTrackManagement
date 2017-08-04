@@ -1,19 +1,15 @@
 class ConferencePlanner
-	def self.plan(talks,conference)
-		all_sessions = []
 
-		conference.tracks.each do |track|
-			all_sessions << track.morning_session
-			all_sessions << track.afternoon_session
-		end
-
+	# To plan, I calculate different permutations of talks orders and then try to fit a permutation into different sessions of tracks
+	def plan(talks, conference)
 		successful_plan = false
 
-		factorials = []
-		factorials[0] = 1
-		for index in 1..talks.size-1
-			factorials[index] = factorials[index-1] * index
-	    end
+		#To protect against sorted list
+		talks = talks.shuffle
+
+		# Using factorial to calculate permutations
+		# https://en.wikipedia.org/wiki/Factorial_number_system#Permutations
+		factorials = get_factorials(talks.size)
 
 		for index in 0..talks.size-1
 			talks_perm = []
@@ -26,20 +22,8 @@ class ConferencePlanner
 				temp_perm.delete_at(selected)
 			end
 
-			for starting_point in 0..(talks_perm.size-1)
-				all_sessions.each {|session| session.reset}
-
-				talks_order = talks_perm[starting_point..-1]
-				talks_order +=  talks_perm[0..starting_point-1]  unless starting_point == 0
-				talks_order.each_with_index do |talk, index|
-					talk_added = all_sessions.any? {|session| session.add_talk(talk)}
-					break unless talk_added
-					successful_plan = conference.tracks.all? {|track| track.is_full?  }  if index == talks_order.size - 1
-				end
-
-				break if successful_plan
-			end
-
+			#try to find a successful plan for this permutation
+			successful_plan = plan_for_permutation(talks_perm, conference)
 			break if successful_plan
 		end
 
@@ -48,6 +32,37 @@ class ConferencePlanner
 		conference
 	end
 
+	#Try to add talks into sessions by choosing different starting points in permutation
+	def plan_for_permutation(talks_permutation, conference)
+		successful_plan = false
+		for starting_point in 0..(talks_permutation.size-1)
+			conference.all_sessions.each {|session| session.reset}
 
+			talks_order = talks_permutation[starting_point..-1]
+			talks_order += talks_permutation[0..starting_point-1] unless starting_point == 0
+			talks_order.each_with_index do |talk, index|
+				#try to add talk to one of sessions
+				talk_added = conference.all_sessions.any? {|session| session.add_talk(talk)}
+				#start again with a new starting point if talk can not be added to any session
+				break unless talk_added
+				#if it is last talk , check tracks. if all tracks are full we have a successful plan
+				successful_plan = conference.tracks.all? {|track| track.is_full?} if index == talks_order.size - 1
+			end
+
+			break if successful_plan
+		end
+		successful_plan
+	end
+
+	private
+
+	def get_factorials(size)
+		result = []
+		result[0] = 1
+		for index in 1..size-1
+			result[index] = result[index-1] * index
+		end
+		result
+	end
 
 end

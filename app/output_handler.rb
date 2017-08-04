@@ -1,6 +1,6 @@
 class OutputHandler
 	def format_input_error(input_errors)
-		"Too many errors in input file :\n\n #{input_errors.map {|e| "Line #{e[:line]}: #{e[:error]}"}}"
+		"Too many errors in input file :\n\n#{input_errors.map {|e| "Line #{e[:line]}: #{e[:error]}"}.join("\n")}"
 	end
 
 	def format_conference_output(conference)
@@ -12,7 +12,6 @@ class OutputHandler
 			result += format_session_output(track.afternoon_session)
 			#According to sample output, The start of networking event always SHOULD show at 05:00PM even if it can start earlier
 			result << '05:00PM Networking Event'
-
 		end
 		result
 	end
