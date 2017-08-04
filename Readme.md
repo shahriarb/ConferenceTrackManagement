@@ -39,10 +39,14 @@ If number of errors is more than 2, __InputFileReader__ will stop processing and
 
 There is a class called __OutputHandler__ which is responsible to format the output. In case of parse errors, main application will use __OutputHandler__ to show formatted output to the user.    
 
-If __InputFileReader__ can parse input file successfully we will have an array containing __Talk__ objects which each of them has a _title_ and _duration_ attribute.
-After parsing input data, main application uses __ConferenceFactory__ to create a bare conference.  _ConferenceFactory.new_conference_ method accept number of tracks in conference and will create a __Conference__  object and will add __Track__ objects to it.
+If __InputFileReader__ can parse input file successfully we will have an array containing __Talk__ objects which each of them has a _title_ and a _duration_ attribute.
+
+After parsing input data, main application uses __ConferenceFactory__ to create a bare conference.  _ConferenceFactory.new_conference_ method will create a __Conference__  object and add __Track__ objects to it.
+
 Each __Track__ has a _morning_session_ and _afternoon_session_. 
+
 A _morning_session_ is an object of __Session__ class which has _stat_time_, _end_time_  and an array of __Talks__.  Also there are three other methods responsible to show the status of this session: _current_length_, _max_length_  and _is_full?_.  To add a _talk_ to a _session_, caller can use _add_talk_ method. This method will try to add the talk and return the operation result. _True_ if operation is succesfull and _false_ if there is not enough room left in session to add the talk.
+
 An _afternoon_session_ is an __OpenEndSession__ which is a subclass of __Session__.  This class has a new attribute called _soft_end_time_ which will help it to have a flexible end of session. Also this class will override _is_full?_ method of its parent to use _soft_end_time_ attribute to calculate if the session is full.
   
 After __ConferenceFactory__  created a bare class, we will pass it with _input_talks_ to __ConferencePlanner__ object to find a successful plan.
