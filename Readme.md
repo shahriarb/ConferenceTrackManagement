@@ -30,7 +30,7 @@ To run all test together:
 2. Go to the path
 3. Run `find test/ -name '*_test.rb' | xargs -n1 -I{}  ruby -Itest {}`
 
-## Design
+## Classes and Application flow
 
 App will receive an input file as an argument which will be passed to __InputFileReader__ class. Without any argument App will assume `data/base_input.txt` as its input data.
 
