@@ -47,12 +47,14 @@ Each __Track__ has a _morning_session_ and _afternoon_session_.
 
 A _morning_session_ is an object of __Session__ class which has _start_time_, _end_time_  and an array of _talks_.  Also there are three other methods responsible to show the status of this session: _current_length_, _max_length_  and _is_full?_.
 
-To add a __talk__ to a __session__, caller can use _add_talk_ method. This method will try to add the talk and return the result of operation. _True_ if operation is succesfull and _false_ if there is not enough room left in __session__ to add the __talk__.
+To add a __talk__ to a __session__, caller can use _add_talk_ method of __Session__. This method will try to add the talk and return the result of operation. _True_ if operation is succesfull and _false_ if there is not enough room left in __session__ to add the __talk__.
 
-An _afternoon_session_ is an __OpenEndSession__ which is a subclass of __Session__.  This class has a new attribute called _soft_end_time_ which will help to have a flexible end of session. Also this class will override _is_full?_ method of its parent to use _soft_end_time_ attribute in its calculation.
+An _afternoon_session_ is an __OpenEndSession__ class which is a subclass of __Session__.  This class has a new attribute called _soft_end_time_ which will help to have a flexible end of session. Also this class will override _is_full?_ method of its parent to use _soft_end_time_ attribute in its calculation.
   
-After __ConferenceFactory__  created a bare class, we will pass it with _input_talks_ to __ConferencePlanner__ object to find a successful plan.
-__ConferencePlanner__ will calculate different permutation of its input-list and for each permutation tries to fit all talks in sessions of conference. 
+After __ConferenceFactory__  created a bare __Conference__, main application will pass it with _input_talks_ to __ConferencePlanner__ object to find a successful plan.
+
+__ConferencePlanner__ will calculate different permutation of its input-list and for each permutation tries to find an order which can complete all sessions of conference.
+ 
 To do this it will choose an starting point in permutation and tries to add each talk sequentially into sessions. If in the middle of sequence a talk can not be added to any session, it means we can not use this permutation with this starting point, so we will going to try another starting_point in permutation.
 
 __ConferenceFactory__ will use [Factorial](https://en.wikipedia.org/wiki/Factorial_number_system#Permutations) to generate all permutations. If any permutation with any starting point can fit into all sessions, __ConferencePlanner__ will return the result to main application and main application will use __OutputHandler__ to deliver the result to end user. 
