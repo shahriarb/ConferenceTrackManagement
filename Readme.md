@@ -35,9 +35,9 @@ To run all test together:
 App will receive an input file as an argument which will be passed to __InputFileReader__ class. Without any argument App will assume `data/base_input.txt` as its input data.
 
 __InputFileReader__ reads the file - line by line - and passes each line to __TalkParser__  class which will parse the line and create a __Talk__ object if input is valid or an error containing the line number and description of the error.
-If number of errors is more than 2, __InputFileReader__ will stop and returns the errors to main application.
+If number of errors is more than 2, __InputFileReader__ will stop processing and return errors to main application.
 
-There is a class called __OutputHandler__ which is responsible to format the output. In case of pars errors, main application will use __OutputHandler__ to show formatted output to the user.    
+There is a class called __OutputHandler__ which is responsible to format the output. In case of parse errors, main application will use __OutputHandler__ to show formatted output to the user.    
 
 If __InputFileReader__ can parse input file successfully we will have an array containing __Talk__ objects which each of them has a _title_ and _duration_ attribute.
 After parsing input data, main application uses __ConferenceFactory__ to create a bare conference.  _ConferenceFactory.new_conference_ method accept number of tracks in conference and will create a __Conference__  object and will add __Track__ objects to it.
