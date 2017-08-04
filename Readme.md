@@ -34,8 +34,9 @@ To run all test together:
 
 App will receive an input file as an argument which will be passed to __InputFileReader__ class. Without any argument App will assume `data/base_input.txt` as its input data.
 
-__InputFileReader__ reads the file line by line and pass each line to __TalkParser__  class which will analyse the line and create a __Talk__ object if input is valid or an error containing the line number and description of the error.
-If number of errors is more than 2, __InputFileReader__ stop it works and return the errors to main application.
+__InputFileReader__ reads the file - line by line - and passes each line to __TalkParser__  class which will parse the line and create a __Talk__ object if input is valid or an error containing the line number and description of the error.
+If number of errors is more than 2, __InputFileReader__ will stop and returns the errors to main application.
+
 There is a class called __OutputHandler__ which is responsible to format the output. In case of pars errors, main application will use __OutputHandler__ to show formatted output to the user.    
 
 If __InputFileReader__ can parse input file successfully we will have an array containing __Talk__ objects which each of them has a _title_ and _duration_ attribute.
